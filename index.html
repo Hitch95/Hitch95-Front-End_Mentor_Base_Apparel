@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <link rel="stylesheet" href="./style.css" />
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+  <script src="./script.js" defer></script>
+</head>
+
+<body>
+  <main>
+    <header>
+      <img src="./images/logo.svg" class="logo"/>
+    </header>
+    <figure>
+      <img src="./images/hero-mobile.jpg" class="mobile mainImg" />
+      <img src="./images/hero-desktop.jpg" class="desktop mainImg" />
+    </figure>
+    <section class="section one">
+      <h1>We're coming soon</h1>
+    </section>
+    <section class="section two">
+      <p>
+        Hello fellow shoppers! We're currently building our new fashion store.
+        Add your email below to stay up-to-date with announcements and our
+        launch deals.
+      </p>
+    </section>
+    <form autocomplete="off">
+      <input type="email" name="email" id="email" placeholder="Email Address" id="input-form" 
+             spellcheck="false" onkeyup="validateEmail()" />
+      <label for="email">
+      </label>
+      <img src="./images/icon-error.svg" id="error-image" alt="" />
+      <button type="submit">
+        <img src="./images/icon-arrow.svg" class="arrow-image" alt="" />
+      </button>
+      <span id="error-message"></span>
+    </form>
+  </main>
+  <footer>
+    <p class="attribution">Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+        Frontend Mentor</a>. 
+        Coded by 
+      <a href="https://www.linkedin.com/in/bahloul-moufidi-279712216/" target="_blank">Hitch95</a>.
+    </p>
+  </footer>
+  <script src="./script.js" defer></script>
+</body>
+
+</html>

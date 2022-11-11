@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;600&display=swap');
+
+:root {
+    --DesaturatedRed: hsl(0, 36%, 70%);
+    --SoftRed: hsl(0, 93%, 68%);
+    --DarkGrayishRed: hsl(0, 6%, 24%);
+    --Creme : hsl(0, 36%, 70%);
+}
+
+/* mon Reset */
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    min-height: 82.21993833504625vh; /* Equivalent à 800px */
+    min-width: 25.844245348035837vw; /* Equivalent à 375px */
+    margin: 0;
+    background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    background-repeat: no-repeat;
+    font-family: 'Josefin-Sans', sans-serif;
+}
+main {
+    background-image: url('./images/bg-pattern-desktop.svg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-wrap: wrap;
+}
+main header {
+    margin: 1.5rem;
+    flex: 1 1 1rem;
+    min-height: 4.336734693877551vh;
+    max-height: calc(4vh - 0.5rem);
+}
+
+.logo {
+    object-fit: cover;
+    height: 100%;
+    height: auto;
+    transition: 180ms ease-in-out;
+}
+
+.desktop {
+    display: none;
+}
+
+main figure img {
+    min-width: 100%;
+    height: auto;
+}
+
+section > h1::first-line {
+    font-weight: 300;
+    color: var(--Creme);
+    font-size: 11vw;                /* Equivalent à 40px */
+}
+section > h1 {
+    color: black;
+    font-weight: 600;
+    font-size: 11vw;                /* Equivalent à 40px */
+    margin: 55px 0px -10px 30px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 11px;
+    line-height: 45px;
+    min-width: 300px;
+}
+section > p {
+    font-size: 15px;
+    color: var(--Creme);
+    text-align: center;
+    margin: 25px 30px 25px 30px;
+    line-height: 1.5;
+    min-width: 315px;
+}
+input {
+    border-radius: 2rem;
+    padding: 15px 0px 15px 25px;
+    width: 300px;
+    margin: 5px 34px 0px 34px;
+    border: 1px solid var(--Creme);
+    color: var(--Creme);
+}
+
+input::placeholder {
+    color: var(--Creme);
+}
+main form img {
+    position: fixed;
+    transform: translate(-130px, 17px);
+}
+main form > #error-image {                    /* ! image */
+    visibility: visible;
+}
+form > button {
+    background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    width: 60px;
+    height: 46px;
+    border-radius: 25px;
+    position: fixed;
+    transform: translate(-94px, 5.5px);
+    border: 0px solid black;
+}
+form button:hover {
+    opacity: 0.9;
+}
+form button img {
+    position: fixed;
+    transform: translate(-4px, -10px);
+}
+span {
+    width: 300px;
+    font-size: 13px;
+    color: red;
+    position: fixed;
+    transform: translate(-308px,60px);
+    visibility: visible;
+}
+
+
+.attribution { 
+    margin: 50px 20px 20px 33px;
+    font-size: 11px; 
+    text-align: center;
+    color: var(--Creme);
+    text-align: center;
+    width: 300px;
+}
+
+.attribution a { 
+    color: #030303;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+@media only screen and (min-width:1440px) {
+    body {
+        min-height: 800px;
+    }
+    main {
+        width: 1440px;
+     /* height: 800px; */
+        
+        height: 100%;
+        display: grid;
+        grid-template-columns: 830px, 610px;
+    }
+    main header, section, form, footer {
+        max-width: 830px;
+    }
+    main header img {
+        margin: 30px 0px 0px 166px;
+    }
+    main figure {
+        display: flex;
+        flex-direction: row;
+        width: 610px;
+    }
+    .desktop {
+        display: inline-block;
+        width: 610px;
+        max-height: 800px;
+        object-fit: contain;
+        position: fixed;
+        transform: translate(415px, -91px);
+        margin: 0px;
+    }
+    main figure img {
+        display: none;
+    }
+    section > h1::first-line {
+        font-size: 4vw;
+        padding: 0px;
+        margin: 0px 0px 0px 166px;
+        max-width: 830px;
+        letter-spacing: 2rem;
+    }
+    section h1 {
+        text-align: left;
+        max-width: 830px;
+        font-size: 4vw;
+        padding: 0px;
+        margin: 125px 0px 0px 166px;
+        line-height: 1;
+        letter-spacing: 2rem;
+        padding: 0px 100px 0px 0px;
+    }
+    section p {
+        max-width: 830px;
+        margin: 15px 0px 30px 166px;
+        text-align: left;
+        font-size: 1.3vw;
+    }
+
+    input {
+        margin: 0px 0px 0px 166px;
+        width: 660px;
+    }
+
+    main form img {
+        position: fixed;
+        transform: translate(-140px, 12px);
+    }
+    form > button {
+        background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+        width: 100px;
+        height: 46px;
+        border-radius: 25px;
+        position: fixed;
+        transform: translate(-100px, 0.5px);
+        border: 0px solid black;
+    }
+    form button:hover {
+        opacity: 0.9;
+    }
+    form button img {
+        position: fixed;
+        transform: translate(-5px, -9px);
+    }
+    span {
+        width: 300px;
+        font-size: 13px;
+        color: red;
+        position: fixed;
+        transform: translate(-633px,60px);
+    }
+    footer {
+        margin: 120px 0px 0px 135px;
+    }
+}
