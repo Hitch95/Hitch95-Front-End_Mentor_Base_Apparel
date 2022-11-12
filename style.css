@@ -25,12 +25,15 @@ body {
     font-family: 'Josefin-Sans', sans-serif;
 }
 main {
-    background-image: url('./images/bg-pattern-desktop.svg');
-    background-size: cover;
     display: flex;
     flex-direction: column;
     width: 100%;
     flex-wrap: wrap;
+}
+body:not(.mainImg) {
+    background-image: url('./images/bg-pattern-desktop.svg');
+    background-size: cover;
+    background-position: center center;
 }
 main header {
     margin: 1.5rem;
@@ -56,7 +59,7 @@ main figure img {
 }
 
 section > h1::first-line {
-    font-weight: 300;
+    font-weight: 200;
     color: var(--Creme);
     font-size: 11vw;                /* Equivalent à 40px */
 }
@@ -71,7 +74,7 @@ section > h1 {
     line-height: 45px;
     min-width: 300px;
 }
-section > p {
+#announcement > p {
     font-size: 15px;
     color: var(--Creme);
     text-align: center;
@@ -87,7 +90,11 @@ input {
     border: 1px solid var(--Creme);
     color: var(--Creme);
 }
-
+input:focus {
+	border-width: 1px;
+	box-shadow: 0px 0px 10px hsla(0, 36%, 70%, 0.5);
+	outline: none;
+}
 input::placeholder {
     color: var(--Creme);
 }
@@ -96,7 +103,7 @@ main form img {
     transform: translate(-130px, 17px);
 }
 main form > #error-image {                    /* ! image */
-    visibility: visible;
+    visibility: hidden;
 }
 form > button {
     background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
@@ -111,14 +118,14 @@ form button:hover {
     opacity: 0.9;
 }
 form button img {
-    position: fixed;
-    transform: translate(-4px, -10px);
+    position: relative;
+    transform: translate(1.5px, 2px);
 }
 span {
     width: 300px;
     font-size: 13px;
     color: red;
-    position: fixed;
+    position: absolute;
     transform: translate(-308px,60px);
     visibility: visible;
 }
@@ -154,7 +161,7 @@ span {
         display: grid;
         grid-template-columns: 830px, 610px;
     }
-    main header, section, form, footer {
+    main header, section, #announcement, form, footer {
         max-width: 830px;
     }
     main header img {
@@ -194,7 +201,7 @@ span {
         letter-spacing: 2rem;
         padding: 0px 100px 0px 0px;
     }
-    section p {
+    #announcement > p {
         max-width: 830px;
         margin: 15px 0px 30px 166px;
         text-align: left;
@@ -206,7 +213,7 @@ span {
         width: 660px;
     }
 
-    main form img {
+    main form img {                         /* ! icon */
         position: fixed;
         transform: translate(-140px, 12px);
     }
@@ -222,16 +229,16 @@ span {
     form button:hover {
         opacity: 0.9;
     }
-    form button img {
-        position: fixed;
-        transform: translate(-5px, -9px);
+    form button img {                       /* arrow img */
+        position: relative;
+        transform: translate(0px, 0px);
     }
     span {
         width: 300px;
         font-size: 13px;
         color: red;
-        position: fixed;
-        transform: translate(-633px,60px);
+        position: absolute;
+        transform: translate(-634px, 60px);
     }
     footer {
         margin: 120px 0px 0px 135px;

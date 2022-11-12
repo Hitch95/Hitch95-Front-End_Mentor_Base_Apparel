@@ -13,27 +13,25 @@
 <body>
   <main>
     <header>
-      <img src="./images/logo.svg" class="logo"/>
+      <img src="./images/logo.svg" class="logo" alt="logo" />
     </header>
     <figure>
-      <img src="./images/hero-mobile.jpg" class="mobile mainImg" />
-      <img src="./images/hero-desktop.jpg" class="desktop mainImg" />
+      <img src="./images/hero-mobile.webp" class="mobile mainImg" alt="the model" />
+      <img src="./images/hero-desktop.webp" class="desktop mainImg" alt="the model" />
     </figure>
-    <section class="section one">
+    <section id="section-one">
       <h1>We're coming soon</h1>
     </section>
-    <section class="section two">
+    <div id="announcement" aria-roledescription="announcement">
       <p>
         Hello fellow shoppers! We're currently building our new fashion store.
         Add your email below to stay up-to-date with announcements and our
         launch deals.
       </p>
-    </section>
+    </div>
     <form autocomplete="off">
-      <input type="email" name="email" id="email" placeholder="Email Address" id="input-form" 
-             spellcheck="false" onkeyup="validateEmail()" />
-      <label for="email">
-      </label>
+      <input type="email" name="email" id="input-form" placeholder="Email Address" id="input-form" 
+             required spellcheck="false" onkeyup="validateEmail()" />
       <img src="./images/icon-error.svg" id="error-image" alt="" />
       <button type="submit">
         <img src="./images/icon-arrow.svg" class="arrow-image" alt="" />
@@ -43,13 +41,12 @@
   </main>
   <footer>
     <p class="attribution">Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+      <a href="https://www.frontendmentor.io?ref=challenge" rel="noreferrer" target="_blank">
         Frontend Mentor</a>. 
         Coded by 
-      <a href="https://www.linkedin.com/in/bahloul-moufidi-279712216/" target="_blank">Hitch95</a>.
+      <a href="https://www.linkedin.com/in/bahloul-moufidi-279712216/" rel="noreferrer" target="_blank">Hitch95</a>.
     </p>
   </footer>
-  <script src="./script.js" defer></script>
 </body>
 
 </html>

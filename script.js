@@ -1,14 +1,14 @@
-const submit = document.querySelector(".button");               // the button
-const form = document.querySelector(".form");                   // the form
+const submitButton = document.querySelector(".button");               // the button
+const formField = document.querySelector(".form");                   // the form
 
-const error = document.getElementById("error-message");         // span message
+const alertMessage = document.getElementById("error-message");         // span message
 const input = document.getElementById("input-form");            // input
 const iconError = document.getElementById("error-image");       // => ! image
 
 /*
 function Init() {
-    submit.addEventListener("click", function () {
-      const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    form.addEventListener("click", function () {
+      const re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
   
       if (!re.test(input.value.toLowerCase())) {
         error.style.visibility = "visible";
@@ -27,15 +27,16 @@ Init();
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////                                                                
 
+
 function validateEmail() {
     if (!input.value.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)) {
-        error.innerHTML = "Please provide a valid email";
+      alertMessage.innerHTML = "Please provide a valid email";
         iconError.style.visibility="visible";
         return false;
     }
 
-    error.innerHTML = "";
-    error.style.visibility = "hidden";
-    iconError.style.visibility="hidden";
+    alertMessage.innerHTML = "";
+    alertMessage.style.visibility = "hidden";
+    iconError.style.visibility= "hidden";
     return true;
 }
